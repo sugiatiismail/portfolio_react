@@ -40,14 +40,16 @@ const Home = () => {
 
 
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+    const isPhone = useMediaQuery('(min-width:480px)');
+    const isTablet = useMediaQuery('(min-width:768px)');
 
     return (
         <ThemeProvider theme={theme}>
             <Box pb={5}>
                 <section id="home">
 
-                    <Box sx={{ backgroundColor: '#f5f7fc', pt: isDesktop ? 5 : '', pb: isDesktop ? 15 : 5 }}>
-                        {isDesktop ?
+                    <Box sx={{ backgroundColor: '#f5f7fc', pt: isTablet & isPhone  ? 5 : '', pb: isDesktop ? 15 : 5 }}>
+                        {isTablet & isPhone ?
                             <Container >
                                 <Grid container>
                                     <Grid item xs>
@@ -100,11 +102,10 @@ const Home = () => {
                             <DrawerComp />
                         }
                         <Container >
-                            <Grid container maxWidth="lg" mt={isDesktop ? 20 : ''} spacing={2} alignItems='center'>
+                            <Grid container maxWidth="lg" mt={isTablet & isPhone  ? 20 : ''} spacing={2} alignItems='center'>
                                 <Grid item md={7} lg={7} sm={12} xs={12}  >
-
                                     <Stack spacing={4}>
-                                        <Typography variant={isDesktop ? "h1" : "h4"} fontWeight={isDesktop ? 400 : 600}>Ismail Halawa</Typography>
+                                        <Typography variant={isTablet & isPhone  ? "h1" : "h4"} fontWeight={isTablet & isPhone  ? 400 : 600}>Ismail Halawa</Typography>
                                         <Typography variant={isDesktop ? "h5" : "subtitle2"} >Front End Developer, | HTML | CSS | JavaScript | ReactJS</Typography>
                                         <Stack direction={'row'} spacing={2} justifyContent={isDesktop ? '' : 'center'}>
                                             <Button href="#porto" color="error" variant="contained">See My Portfolio</Button>
@@ -319,7 +320,7 @@ const Home = () => {
                         </Box>
                     </Container>
                 </section>
-                {isDesktop ?
+                {isTablet & isPhone  ?
                     <Box paddingTop={18} >
                         <Container >
                             <Grid container spacing={1}>
