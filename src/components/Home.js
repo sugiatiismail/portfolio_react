@@ -108,7 +108,7 @@ const Home = () => {
                                         <Typography variant={isDesktop ? "h5" : "subtitle2"} >Front End Developer, | HTML | CSS | JavaScript | ReactJS</Typography>
                                         <Stack direction={'row'} spacing={2} justifyContent={isDesktop ? '' : 'center'}>
                                             <Button href="#porto" color="error" variant="contained">See My Portfolio</Button>
-                                            <Button color="secondary" variant="contained">Contact</Button>
+                                            <Button href="https://drive.google.com/file/d/1JmVr1fyNeQuqCDnd5vgP9D4g4g_zoohv/view?usp=sharing" color="secondary" variant="contained">Download My CV</Button>
                                         </Stack>
                                     </Stack>
 
@@ -191,7 +191,7 @@ const Home = () => {
                         <Typography variant={isDesktop ? "h3" : "h4"} textAlign={'center'} mb={isDesktop ? 20 : 5} fontWeight={500}>Experience</Typography>
                         <Container>
                             <Grid container spacing={2}>
-                                <Grid item md={3} lg={3} sm={12} xs={12}  >
+                                <Grid item md={3} lg={3} sm={12} xs={12}>
                                     <Stack spacing={4}>
                                         <Typography variant="h5" fontWeight={500} >SKILLS:</Typography>
                                         <Stack direction={'row'} spacing={1}>
